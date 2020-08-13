@@ -1,0 +1,252 @@
+html { /*Стили общие по всему сайту*/
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+p {
+    font-family: Arial;
+}
+a {
+    font-family: Arial;
+    text-decoration: none;
+}
+.contentwrapp { /*Стили содержимого розового блока*/
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    float: right;
+    width: 80%;
+    height: 55%;
+    margin: 50px 0 0 0;
+    background-color: #ff97e2;
+    transition: 0.7s ease;
+    transform: translateX(150%);
+}
+.contentwrapp.isShown {
+    transform: translateX(0);
+}
+.shapka {
+    height: 20%;
+    width: 100%;
+}
+.logo {
+    float: left;
+    width: 12%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abv {
+    height: 70%;
+}
+.menu {
+    width: 88%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapppunkt {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.punkt {
+    color: white;
+}
+.wrapptext {
+    height: 80%;
+    width: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+.text {
+    margin: 0 0 0 15px;
+    font-size: 10vh;
+}
+.text:hover {
+    color: white;
+}
+.yellow { /*Стили содержимого желтого блока*/
+    position: relative;
+    float: left;
+    width: 90%;
+    height: 55%;
+    margin: 150px 0 0 0;
+    background-color: #f0f35b;
+    transition: 0.7s ease;
+    transform: translateX(-150%);
+}
+.yellow.isShown {
+    transform: translateX(0);
+}
+.rightpole {
+    margin: 15px 0 0 15px;
+    border: none;
+    height: 50px;
+    width: 300px;
+    font-size: 40px;
+}
+.leftpole {
+    margin: 15px 0 0 22.5%;
+    border: none;
+    height: 50px;
+    width: 300px;
+    font-size: 40px;
+}
+.button {
+    margin: 15px 0 0 15px;
+    border: none;
+    height: 50px;
+    width: 300px;
+    font-size: 40px;
+    color: gray;
+    border-radius: 15px;
+    color: black;
+}
+.leftcontent { /*Стили левой картинки*/
+    width: 25%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.leftimg {
+    width: 70%;
+    position: relative;
+    z-index: 3;
+    margin: 0 0 0 15px;
+}
+.center { /*Стили переключателя между страницами*/
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textfooter {
+    margin: 0 15px 0 15px;
+}
+#left {
+    height: 100%;
+    width: 33.3%;
+}
+#right {
+    height: 100%;
+    width: 33.3%;
+}
+.left {
+    display: block;
+    float: right;
+}
+.perehod {
+    height: 90%;
+}
+.rightcontent { /*Стили правой картинки*/
+    width: 25%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 15px 15px 0;
+}
+.rightimg {
+    display: block;
+    float: right;
+    width: 60%;
+    position: relative;
+    z-index: 3;
+}
+.otvet { /*Стили условного ответа от сервера*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.5);
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.wrapper {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.krest {
+    position: absolute;
+    width: 5%;
+    right: 15px;
+    top: 15px;
+}
+@media screen and (max-width: 720px) { /*Мобильная адаптация*/
+    body { /*Тело*/
+        background-color: #ff97e2;
+    }
+    .center { /*Стили переключателя*/
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .contentwrapp { /*Стили содержимого розового прямоугольника*/
+        position: relative;
+        width: 100%;
+        height: 20%;
+    }
+    .logo {
+        width: 25%;
+    }
+    .menu {
+        width: 75%;
+    }
+    .text {
+        font-size: 3vh;
+    }
+    .yellow {  /*Стили содержимого розового прямоугольника*/
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 77.5%;
+    }
+    .leftpole {
+        margin: 15px 0 0 15px;
+        width: 30%;
+    }
+    .rightpole {
+        margin: 15px 0 0 15px;
+        width: 30%;
+    }
+    .button {
+        margin: 15px 0 0 15px;
+        width: 30%;
+    }
+    .leftcontent { /*Стили левой картинки*/
+        margin: 0;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+    }
+    .leftimg {
+        width: 100%;
+        height: 50%;
+    }
+    .rightcontent { /*Стили правой картинки*/
+        width: 80%;
+        margin: 0 15px 15px 0;
+    }
+    .wrapper {
+        width: 90%;
+        height: 20%;
+    }  /*Стили условного ответа от сервера*/
+}
